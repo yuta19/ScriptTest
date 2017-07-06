@@ -19,12 +19,7 @@ public class TestScript : MonoBehaviour {
 		}
 
 		public void Magic(){
-
-			for(int i = 0; i < 10; i++){
-				mp -= 5;
-			}
-
-
+			mp -= 5;
 			if (mp < 5) {
 				Debug.Log ("MPが足りないため魔法が使えない。" );
 			} else {
@@ -56,8 +51,10 @@ public class TestScript : MonoBehaviour {
 
 		lastboss.Attack ();
 		lastboss.Defence (3);
-		lastboss.Magic ();
 
+		for (int i = 0; i < 10; i++) {
+			lastboss.Magic ();
+		}
 
 			
 
